@@ -52,11 +52,26 @@
         $name = $_POST['name'];
         $produk = $_POST['produk'];
         $jumlah = $_POST['jumlah'];
+        $kulkas = 3100000 * $jumlah;
+        $tv = 4200000 * $jumlah;
+        $mesin_cuci = 3800000 * $jumlah;
 
         echo "Nama Customer : ". $name;
         echo "<br/>Produk Pilihan : ". $produk;
         echo "<br/>Jumlah Produk : ". $jumlah;
-
+        echo "<br/>";
+        
+        switch ($produk) {
+            case "KULKAS":
+                echo "Total Belanja : ". $kulkas;
+                break;
+            case "TV":
+                echo "Total Belanja : ". $tv;
+                break;
+            case "MESIN CUCI":
+                echo "Total Belanja : ". $mesin_cuci;
+                break;
+        }
     }
     ?>
 </body>
