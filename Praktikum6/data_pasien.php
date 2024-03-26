@@ -10,6 +10,11 @@ $pasiens = $dbh->query($query);
 
 ?>
 
+<?php
+require_once 'navbar.html';
+require_once 'sidebar.html';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,3 +57,7 @@ $pasiens = $dbh->query($query);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+require_once 'footer.html';
+?>

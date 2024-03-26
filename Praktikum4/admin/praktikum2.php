@@ -1,3 +1,8 @@
+<?php
+require_once 'navbar.html';
+require_once 'sidebar.html';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,3 +81,7 @@
     ?>
 </body>
 </html>
+
+<?php
+require_once 'footer.html';
+?>

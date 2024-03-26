@@ -1,4 +1,9 @@
 <?php
+require_once 'navbar.html';
+require_once 'sidebar.html';
+?>
+
+<?php
     $ar_buah = ["Pepaya", "Mangga","Pisang","Jambu" ];
     // cetak buah ke index ke 2
     echo $ar_buah[2];
@@ -22,4 +27,8 @@
     echo '<li> buah index - ' . $k .' adalah '. $v .'</li>';
     }
     echo '</ul>';
+?>
+
+<?php
+require_once 'footer.html';
 ?>
