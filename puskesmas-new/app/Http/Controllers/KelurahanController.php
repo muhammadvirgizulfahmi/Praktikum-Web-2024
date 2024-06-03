@@ -53,7 +53,8 @@ class KelurahanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $kelurahan = Kelurahan::find($id);
+        return view('admin.kelurahan.edit', compact('kelurahan'));
     }
 
     /**
@@ -61,7 +62,15 @@ class KelurahanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'nama' => 'required|string',
+            'nama_kecamatan' => 'required|string'
+        ]);
+
+        $kelurahan = Kelurahan::find($id);
+        $kelurahan->update($validated);
+        // Kelurahan::create($id);
+        return redirect('dashboard/kelurahan')->with('pesan', 'Data Berhasil diperbarui');
     }
 
     /**
@@ -69,6 +78,9 @@ class KelurahanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $kelurahan = Kelurahan::find($id);
+        $kelurahan->delete();
+
+        return redirect('dashboard/kelurahan');
     }
 }
