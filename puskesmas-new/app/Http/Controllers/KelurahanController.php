@@ -81,6 +81,6 @@ class KelurahanController extends Controller
         $kelurahan = Kelurahan::find($id);
         $kelurahan->delete();
 
-        return redirect('dashboard/kelurahan');
+        return redirect('dashboard/kelurahan')->with('pesan', 'Data Berhasil diperbarui');
     }
 }

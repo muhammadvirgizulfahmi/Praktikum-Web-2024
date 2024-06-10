@@ -25,7 +25,7 @@ require_once 'sidebar.html';
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-          <h2 class="text-center">Selamat Datang <?= $_SESSION['user']['name']; ?></h2>
+          <h2 class="text-center">Selamat Datang Virgi</h2>
           </div>
                         <!-- /.card-body -->
                     </div>

@@ -36,11 +36,8 @@ $kelurahans = $dbh->query($query);
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
-          <div class="input-group-text">
-            <i class="fa fa-address-card"></i>
-          </div>
         </div> 
-        <input id="kode" name="kode" type="text" class="form-control" required="required">
+        <input multiple="multiple" class="fileupload-input" id="input_10" type="file" name="file" aria-labelledby="label_10" aria-hidden="true" tabindex="-1">
       </div>
     </div>
   </div>

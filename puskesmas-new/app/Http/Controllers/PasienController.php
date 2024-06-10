@@ -87,6 +87,6 @@ class PasienController extends Controller
         $pasien = Pasien::find($id);
         $pasien->delete();
 
-        return redirect('dashboard/pasien');
+        return redirect('dashboard/pasien')->with('pesan', 'Data Berhasil diperbarui');
     }
 }
