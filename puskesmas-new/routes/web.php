@@ -21,10 +21,16 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::prefix('/about')->group(function() {
+        Route::get('/', [AboutController::class, 'index']);
+    });
+
+    Route::prefix('/contact')->group(function() {
+        Route::get('/', [ContactController::class, 'index']);
+    });
+
     Route::prefix('/dashboard')->group(function() {
         Route::get('/', [AdminController::class, 'index']);
-        Route::get('/contact', [ContactController::class, 'index']);
-        Route::get('/about', [AboutController::class, 'index']);
         
         Route::prefix('/kelurahan')->group(function () {
             Route::get('/', [KelurahanController::class, 'index']);
