@@ -37,7 +37,7 @@ class PasienController extends Controller
             'kelurahan_nama' => 'required|string',
         ]);
         Pasien::create($validated);
-        return redirect('dashboard/pasien');
+        return redirect('dashboard/pasien')->with('pesan', 'Data Berhasil ditambahkan');
     }
 
     /**
